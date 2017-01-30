@@ -13,9 +13,9 @@ There are some software requirements to be considered in order to run this progr
 3. Mozilla Firefox with its geckodriver
 4. Celery
 5. Some python modules as listed -
-⋅⋅1. Scrapy
-⋅⋅2. Celery
-⋅⋅3. selenium
-⋅⋅4. re
-⋅⋅5. random
-⋅⋅6. chartit
+  1. Scrapy
+  2. Celery
+  3. selenium
+  4. re
+  5. random
+  6. chartit
