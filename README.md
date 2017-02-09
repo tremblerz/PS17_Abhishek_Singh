@@ -1,23 +1,21 @@
 # Facebook User Focused Analytics
-## This project is a part of screening task. Its function requirement is to build a Facebook scraper and perform visual analytics on the data.
+## This project is a part of screening task. Its functional requirement is to build a Facebook scraper and perform visual analytics on the data.
 
-### Initial Ideas and Implementation -
+### Backbone of this Project
+This project has two major parts -
+First is the main facebook crawler which visits accross the friends' profile and scrapes the friendship data such as mutual friends and friendship since.
+The other one is the web application which runs this script as a shared task with Celery which is having rabbit-mq broker for AMQP. To render the data on web in realtime, chartit template of Django is used.
 
-#### * Design a scraper for Facebook which gathers data for all friends of user whose credentials are specified.
- * This would involve managing cookies and sessions on Scrapy.
- * Usage of WebKit to perform DOM handling.
-#### * Develop a Web Portal from where an Authenticated user can perform analytics by specifying his/her Facebook credentials.
- * This would include task asignment for scraper at Backend.
- * Visualizations libraries such as D3.js would be needed to render analytics.
-
-### Proposed Technology Stack -
-
-#### * Scraper
- * Python 3.4.3
- * PhantomJS
- * selenium
-
-#### * Analytics and User interaction
- * Django
- * Bootstrap
- * D3.js
+### Running this project
+There are some software requirements to be considered in order to run this program.
+1. django >= 1.9
+2. rabbit-mq server
+3. Mozilla Firefox with its geckodriver
+4. Celery
+5. Some python modules as listed -
+  1. Scrapy
+  2. Celery
+  3. selenium
+  4. re
+  5. random
+  6. chartit
